@@ -1,0 +1,23 @@
+/venv/
+/.idea
+/.eric7project
+/public/webdownload
+/public/temp
+/public/downfile
+/control_xuying
+/control_cfl
+/public/save_dir
+/public/pdf
+/public/mdx
+/public/libs/chrome
+/public/libs/chrome.zip
+*/__pycache__/
+/PyQt-5快速开发与实战-eric .mobi
+/Python_QT-GUI与数据可视化编程-qt.pdf
+/qt5基础教程.txt
+/create-gui-applications-pyside6.txt
+/.project
+/.pydevproject
+/build-untitled-Desktop_Qt_6_3_1_MinGW_64_bit-Debug
+/start.bat
+/开发资料

@@ -1,0 +1,24 @@
+/control_okx
+/control_okx.zip
+/venv/
+/.idea
+/.eric7project
+public/webdownload
+public/temp
+public/downfile
+public/mdx
+public/save_dir
+public/pdf
+*/__pycache__/
+/PyQt-5快速开发与实战-eric .mobi
+/Python_QT-GUI与数据可视化编程-qt.pdf
+/qt5基础教程.txt
+/create-gui-applications-pyside6.txt
+/.project
+/.pydevproject
+/build-untitled-Desktop_Qt_6_3_1_MinGW_64_bit-Debug
+/public/libs/chrome
+/public/libs/chrome.zip
+/git_push_gitee_github.bat
+/git_pull_from_gitee.bat
+/start.bat
