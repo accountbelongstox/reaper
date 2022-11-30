@@ -1,0 +1,233 @@
+{
+  "name": "OkxExchange",
+  "version": "python:3.8",
+  "description": "",
+  "author": "xyc",
+  "scripts": {
+    "test": "echo  &amp;&amp; exit 1"
+  }, 
+  "database": [
+    {
+      "tabname": "coin_real_time_point",
+      "fixed_name":"coin_real_time_point",
+      "fields": {
+        "real_time": "INTEGER",
+        "data1": "REAL",
+        "data2": "REAL",
+        "real_price": "REAL",
+        "real_price2": "REAL",
+        "data_": "REAL",
+        "data__": "REAL",
+        "coin_name_id": "INTEGER",
+        "read_time": "REAL"
+      }
+    },
+    {
+      "tabname": "coin_digital",
+      "fixed_name":"coin_digital",
+      "fields": {
+        "coin_name": "VARCHAR UNIQUE",
+        "full_name": "VARCHAR",
+        "description": "TEXT",
+        "profit": "REAL",
+        "read_time": "REAL"
+      }
+    },
+    {
+      "tabname": "coin_market_reversal_information",
+      "fixed_name":"coin_market_reversal_information",
+      "fields": {
+        "reverse_point": "REAL",
+        "reverse_type": "INTEGER",
+        "coin_name_id": "TEXT",
+        "read_time": "REAL"
+      }
+    }
+   ],
+  "multiaccount_support": true,
+  "must_login": true,
+  "login": {
+    "before": {
+      "action_1": "click",
+      "action_2": "long_press",
+      "action_3": "slide",
+      "action_QR": "scan",
+      "selectors": {
+        "selectors_1": [
+        "#qdblhsHs button",
+        ".web-login-tab-list__item .web-login-tab-list__item__active"
+       ],
+         "selectors_2": [
+        "#qdblhsHs button",
+        ".web-login-tab-list__item .web-login-tab-list__item__active"
+       ],
+         "selectors_3": [
+        "#qdblhsHs button",
+        ".web-login-tab-list__item .web-login-tab-list__item__active"
+        ],
+
+         "selectors_QR": [
+        "#qdblhsHs button",
+        ".web-login-tab-list__item .web-login-tab-list__item__active"
+       ]
+      },
+      "active_check ": false,
+    "login_url ": "https://b2bwork.baidu.com/login",
+    "loginVerify_url ": "https://b2bwork.baidu.com/dashboard",
+    "login_user ": "zsw100023649",
+    "login_pwd ": "Mts77066.",
+    "login_skip_url ": "https://b2bwork.baidu.com/login",
+     "after": {
+      "clicks": [
+        "found 404"
+      ],
+
+    "active_check": false,
+    "login_url": "https://b2bwork.baidu.com/login",
+    "login_verify_url": "https://b2bwork.baidu.com/dashboard",
+    "login_user": "zsw100023649",
+    "login_pwd": "Mts77066.",
+     "login_skip_url": "https://b2bwork.baidu.com/login",
+    "user_input_selector":  "//*[@id=\"login-pannel\"]/div[3]/div/article/article/article/form/div[1]/div/input",
+    "pwd_input_selector": "//*[@id=\"login-pannel\"]/div[3]/div/article/article/article/form/div[2]/div/div/input",
+    "submit": "//*[@id=\"login-pannel\"]/div[3]/div/article/article/article/form/div[5]/button",
+    "login_active": {
+      "active_url": "https://b2bwork.baidu.com/dashboard",
+      "active_period": 60,
+      "clicks": [
+        "/html/body/div[1]/div/div[2]/div[1]/div[1]/div/ul/div[8]/li/ul/div[1]/a",
+        "//*[@id=\"app\"]/div/div[1]/div/div[1]/div/img"
+
+      ],
+
+      "string": {
+          "login_user":"",
+        "login_pwd":""
+
+      }
+
+
+    },
+    "after": {
+      "clicks": [
+        ".primary"
+      ]
+
+    },
+
+    "connectionStrings": {
+      "add_name=":"连接字符串名称",
+       "Data_Source":"数据库IP地址;",
+      "Initial_Catalog": "数据库的名字 ",
+      " User_ID": "登陆数据库的用户名",
+      "Password":"登陆数据库的密码 "
+
+    }
+    }
+     }
+  },
+  "data_fields": [
+    {
+      "datatype": "shop_score",
+      "description": "店铺评分",
+      "data_url": "https://www.douyin.com/?enter=guide",
+      "loaded": {
+        "action": "click",
+        "selectors": [{
+
+        }]
+      },
+      "data_configs": {
+        "sentinel_selector": "//div[@class=\"shop-diagnose\"]/p",
+        "datas": [
+          {
+            "datatype": "shop_score",
+            "description": "店铺评分",
+            "selectors": [
+              {
+                "selector_names": "店铺评分",
+                "selectors": {
+                  "selector": ".shop-diagnose p",
+                  "attr": "val"
+                }
+              }
+            ],
+            "attr": "value"
+          },
+          {
+            "datatype": "commodity_management",
+            "description": "商品管理",
+            "selectors": [
+              {
+                "selector_names": "商品总数,交易商品,在售中,已下架,已驳回",
+                "selectors": {
+                  "selector": ".pm-data .item-data",
+                  "attr": "val"
+                }
+              }
+            ],
+            "attr": "value"
+          }
+        ]
+      }
+    },
+    {
+      "datatype": "smart_business_opportunity",
+      "description": "智慧商机",
+      "data_url": "https://b2bwork.baidu.com/service/business/index?scrollTop=0",
+      "loaded": {
+        "action": "click",
+        "selectors": [".dy-account-close"]
+      },
+      "data_configs": {
+        "sentinel_selector": "//*[@class=\"el-tooltip\"]",
+        "datas": [
+          {
+            "datatype": "core_data",
+            "description": "核心数据",
+            "selectors": [
+              {
+                "selector_names": "曝光量,点击量,访客数,电话量,表单量,IM数",
+                "selectors": {
+                  "selector": ".el-tooltip",
+                  "attr": "val"
+                }
+              },
+              {
+                "selector_names": "曝光量百分比,点击量百分比,访客数增减,电话量增减,表单量增减,IM数增减",
+                "selectors": [
+                  {
+                    "selector": ".num span",
+                    "attr": "val"
+                  },
+                  {
+                    "selector": ".el-popover__reference span[class=icon]",
+                    "attr": "attr",
+                    "attr_val": "innerHTML",
+                    "callback": "callback_data"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "multiaccount_datas": [
+    {
+      "login": {
+        "loginUser": "zsw100023649",
+        "loginPwd": "Mts77066."
+      },
+      "data_fields": []
+    },
+    {
+      "login": {
+        "loginUser": "zsw100023649",
+        "loginPwd": "Mts77066."
+      },
+      "data_fields": []
+    }
+  ]
+}
